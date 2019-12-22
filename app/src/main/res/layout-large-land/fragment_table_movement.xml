@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="sugelico.postabsugelico.table_movement">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tableLst"
+            android:layout_toEndOf="@+id/products_lst"
+            android:layout_alignTop="@+id/products_lst" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="500sp"
+            android:layout_height="match_parent"
+            android:id="@+id/products_lst"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageButton4" />
+
+        <ImageButton
+            android:layout_width="64sp"
+            android:layout_height="64sp"
+            android:background="@drawable/ic_left_arrow_angle"
+            android:id="@+id/imageButton4"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+</FrameLayout>

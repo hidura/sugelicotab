@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginRight="8dp"
+    android:layout_height="200dp"
+    android:padding="5dp"
+    android:layout_width="220dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/food_ex"
+        android:id="@+id/product_logo" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <FrameLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="$0.00"
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/price"
+                android:layout_weight="1"
+                android:textColor="#000000" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_gravity="right"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_add"
+                android:id="@+id/add_prod"
+                android:layout_weight="1"
+                app:backgroundTint="#FFFFFF"
+                android:background="@drawable/ic_add" />
+        </FrameLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorButton">
+            <TextView
+                android:text="Nombre producto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="Descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:id="@+id/description"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/order_proc"
+        android:layout_width="260sp"
+        android:layout_height="200sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="5sp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/order_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:text="CODIGO ORDEN"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBack"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/order_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:paddingLeft="5sp"
+            android:text="Tipo de orden"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBack"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cl_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:paddingLeft="5sp"
+            android:text="CLIENTE"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBack"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/place_hour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5sp"
+            android:text="HORA DE COLOCACION"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBack"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:background="@android:drawable/screen_background_dark_transparent"
+            android:padding="5sp"
+            android:text="@string/validation"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/send_proc"
+        android:layout_width="260sp"
+        android:layout_height="200sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="5sp"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/send_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:text="CODIGO ORDEN"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBack"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/send_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:paddingLeft="5sp"
+            android:text="Tipo de orden"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBack"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/send_cl_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:paddingLeft="5sp"
+            android:text="CLIENTE"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBack"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/send_hour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5sp"
+            android:text="HORA DE COLOCACION"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBack"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:background="@android:drawable/screen_background_dark_transparent"
+            android:text="@string/send_lbl" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/valid_proc"
+        android:layout_width="260sp"
+        android:layout_height="200sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="5sp"
+        android:background="@android:color/holo_green_light"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/valid_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:text="CODIGO ORDEN"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBack"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/valid_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:paddingLeft="5sp"
+            android:text="Tipo de orden"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBack"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/valid_cl_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:paddingLeft="5sp"
+            android:text="CLIENTE"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBack"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/valid_hour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5sp"
+            android:text="HORA DE COLOCACION"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBack"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/valid_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:background="@android:drawable/screen_background_dark_transparent"
+            android:text="@string/openticket_lbl" />
+
+    </LinearLayout>
+</LinearLayout>

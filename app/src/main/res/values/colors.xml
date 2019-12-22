@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#970500</color>
+    <color name="colorPrimaryDark">#6a0000</color>
+    <color name="colorAccent">#ffbb00</color>
+    <color name="colorButton">#78898989</color>
+    <color name="colorBackgroundGrey">#ffebb8</color>
+    <color name="colorBack">#f0000000</color>
+    <color name="colorGrey">#3e3e3e</color>
+    <color name="color_bg_area">#727073</color>
+    <color name="colorTextdGrey">#232323</color>
+    <color name="colorFontTransparent">#32444343</color>
+    <color name="occupied_table">#FF0102</color>
+    <color name="unoccupied_table">#dfdfdf</color>
+    <color name="white_bk">#FFFFFF</color>
+</resources>

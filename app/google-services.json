@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "549263913890",
+    "firebase_url": "https://sugelico-4ba24.firebaseio.com",
+    "project_id": "sugelico-4ba24",
+    "storage_bucket": "sugelico-4ba24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549263913890:android:ab9a83cf70cebd8b",
+        "android_client_info": {
+          "package_name": "sugelico.postabsugelico"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "549263913890-850esg4a7lg54lc4bftv7amqdc9ji0gs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sugelico.postabsugelico",
+            "certificate_hash": "6cc4fea0977d7011d7db5e3eb9a15651c23ea0dc"
+          }
+        },
+        {
+          "client_id": "549263913890-kv2ibohia7md350npubkb66tdlqv0imf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3RL5srmuou_5Cw40FkqL0O3AP-rfmtUU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "549263913890-kv2ibohia7md350npubkb66tdlqv0imf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ordercodes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/regular_opts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/transfer_div"
+            android:layout_width="wrap_content"
+            android:layout_height="164dp"
+            android:layout_marginLeft="40sp"
+            android:orientation="vertical">
+
+
+            <ImageButton
+                android:id="@+id/transfer"
+                android:layout_width="96sp"
+                android:layout_height="96sp"
+                android:background="@drawable/ic_transfer" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Transfer"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white_bk"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:typeface="serif" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/discount_div"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30sp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/discount"
+                android:layout_width="96sp"
+                android:layout_height="96sp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/ic_discount" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/discount"
+                android:layout_alignStart="@+id/discount"
+                android:layout_alignTop="@+id/textView26"
+                android:text="Descuento"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white_bk"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:typeface="sans" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/del_div"
+            android:layout_width="wrap_content"
+            android:layout_height="164dp"
+            android:layout_marginLeft="30sp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <ImageButton
+                android:id="@+id/delProd"
+                android:layout_width="96sp"
+                android:layout_height="96sp"
+                android:layout_marginLeft="35sp"
+                android:background="@drawable/ic_garbage" />
+
+            <TextView
+                android:id="@+id/textView282"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/delprod_str"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white_bk"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:typeface="serif" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/split_div"
+            android:layout_width="wrap_content"
+            android:layout_height="164dp"
+            android:layout_marginLeft="30sp"
+            android:orientation="vertical">
+
+
+            <ImageButton
+                android:id="@+id/split"
+                android:layout_width="96sp"
+                android:layout_height="96sp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/ic_split_check" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Separar cuentas"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white_bk"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:typeface="serif" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pre_account_div"
+            android:layout_width="wrap_content"
+            android:layout_height="164dp"
+            android:layout_marginLeft="30sp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+
+            <ImageButton
+                android:id="@+id/reprint_preorder"
+                android:layout_width="96sp"
+                android:layout_height="96sp"
+                android:layout_marginLeft="10sp"
+                android:background="@drawable/ic_printbillagain" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/re_print"
+                android:textAlignment="viewStart"
+                android:textAllCaps="true"
+                android:textColor="@color/white_bk"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:typeface="serif" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bill_div"
+            android:layout_width="wrap_content"
+            android:layout_height="164dp"
+            android:layout_marginLeft="30sp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <ImageButton
+                android:id="@+id/getBill"
+                android:layout_width="96sp"
+                android:layout_height="96sp"
+                android:layout_marginLeft="35sp"
+                android:background="@drawable/ic_cashier_1" />
+
+            <TextView
+                android:id="@+id/textView280"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/print_bill"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white_bk"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:typeface="serif" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/trans_div"
+        android:layout_width="match_parent"
+        android:layout_height="292dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regular_opts">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/plates_lst"
+            android:layout_width="500sp"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tbl_trans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/tables_lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <GridView
+                    android:id="@+id/tables"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp" />
+
+                <Button
+                    android:id="@+id/transfer_prods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="@string/trans_acc"
+                    android:textAlignment="center"
+                    android:textStyle="normal|bold" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/discform_div"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/reference"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/disc_hint"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white_bk"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold" />
+
+                <EditText
+                    android:id="@+id/reference"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#FFFFFF"
+                    android:hint="@string/discount_lbl"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#32444343"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/make_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView30"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/accept" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/delform_div"
+                android:layout_width="483dp"
+                android:layout_height="200sp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView400"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/delreason"
+                    android:layout_below="@+id/delreason"
+                    android:layout_marginTop="39dp"
+                    android:text="@string/delprod_reason"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white_bk"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold" />
+
+                <EditText
+                    android:id="@+id/delreason"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#FFFFFF"
+                    android:hint="@string/delprod_reason"
+                    android:inputType="textCapSentences"
+                    android:paddingLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#32444343"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/deleteprod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView400"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/accept" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/splitAcc_div"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <EditText
+                    android:id="@+id/split_name"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="23dp"
+                    android:background="#FFFFFF"
+                    android:hint="@string/split_hint"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#32444343"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/split_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/split_name"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/accept" />
+
+                <GridView
+                    android:id="@+id/cl_lst"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/split_send"
+                    android:columnWidth="50dp"
+                    android:numColumns="3"
+                    android:padding="10dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/print_preAcc"
+                android:layout_width="match_parent"
+                android:layout_height="344dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:id="@+id/paytp_div"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/paytps"
+                        android:layout_width="454dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:weightSum="1">
+
+                        <RadioButton
+                            android:id="@+id/radioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center_horizontal"
+                            android:checked="false"
+                            android:contentDescription="112"
+                            android:text="Pago con tarjeta"
+                            android:textSize="25dp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="0.13"
+                            android:checked="false"
+                            android:contentDescription="111"
+                            android:text="Pago en efectivo"
+                            android:textSize="25dp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <GridView
+                    android:id="@+id/preAcc_div"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/paytp_div"
+                    android:layout_marginTop="10sp"
+                    android:columnWidth="50dp"
+                    android:numColumns="3"
+                    android:padding="10dp" />
+            </RelativeLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/admin_opts"
+        android:layout_width="998dp"
+        android:layout_height="467dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="162dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout12"
+                android:layout_width="134dp"
+                android:layout_height="144dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.74"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/change_cmp"
+                    android:layout_width="95dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ic_store_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.521"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/change_company"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.333"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/change_cmp" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="135dp"
+                android:layout_height="144dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+                <ImageButton
+                    android:id="@+id/apperture_btn"
+                    android:layout_width="95sp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ic_cashier_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="127dp"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/opened"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/apperture_btn" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="135dp"
+                android:layout_height="144dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="344dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/cashbox"
+                    android:layout_width="95sp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@mipmap/ic_cashbox"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/cashbox"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cashbox" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="135dp"
+                android:layout_height="144dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="324dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout12"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/reprint"
+                    android:layout_width="95dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ic_printbillagain"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/re_print"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/reprint" />
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/pastorders"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/cashboxapperture"
+                android:layout_width="500sp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:padding="15sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/amount_aperture"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#FFFFFF"
+                    android:hint="@string/discount_lbl"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#32444343"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/aperture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:text="@string/make_aperture" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/cashbox_area"
+                android:layout_width="962dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.076">
+
+                    <Button
+                        android:id="@+id/cashbox_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/next"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:layout_editor_absoluteX="425dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/cashboxlst"
+                        android:layout_width="925dp"
+                        android:layout_height="203dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toTopOf="@+id/cashbox_next"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </android.support.constraint.ConstraintLayout>
+            </ScrollView>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

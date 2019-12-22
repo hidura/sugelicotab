@@ -1,0 +1,53 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="700dp"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="sugelico.postabsugelico.products">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/products_list"
+        android:padding="10dp"
+        android:visibility="gone">
+
+    </android.support.v7.widget.RecyclerView>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/subcategories_lst"
+        android:padding="10dp"
+        android:visibility="gone">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/progress_div3"
+        android:layout_gravity="center">
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar_prods"
+            android:visibility="visible"/>
+
+        <TextView
+            android:text="@string/progress_prods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView29"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
+</FrameLayout>

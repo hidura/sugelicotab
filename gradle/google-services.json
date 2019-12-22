@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "988338060517",
+    "firebase_url": "https://sugelicopos.firebaseio.com",
+    "project_id": "sugelicopos",
+    "storage_bucket": "sugelicopos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988338060517:android:3da1b8a1bc6c165d",
+        "android_client_info": {
+          "package_name": "sugelico.postabsugelico"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988338060517-p9j8c91p1dgihjkg4jesu8e0jb4ld97k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoKiiOL7ZvLg0bE-SPcIrrTaxSvEXU6xo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

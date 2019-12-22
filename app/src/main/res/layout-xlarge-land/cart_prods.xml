@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:layout_width="250dp">
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_remove"
+        android:id="@+id/delbtn"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="left"
+        app:backgroundTint="@color/colorPrimary" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/position"
+        android:visibility="gone" />
+
+    <TextView
+        android:text="Producto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/prod_name"
+        android:layout_weight="1"
+        android:textColor="?android:attr/colorForegroundInverse"
+        android:textSize="18dp"
+        android:textStyle="normal|bold"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginLeft="15sp" />
+</LinearLayout>

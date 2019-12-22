@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:paddingBottom="1dp"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:paddingTop="1dp"
+    tools:context="sugelico.postabsugelico.Dashboard">
+
+    <RelativeLayout
+        android:id="@+id/qr_scan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@color/colorBack"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_logos" />
+
+        <ImageButton
+            android:id="@+id/imageView9"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_below="@+id/textView18"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_scan" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="600dp"
+            android:layout_height="5dp"
+            android:layout_alignTop="@+id/imageView9"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="196dp"
+            android:src="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView8"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Escanear Tarjeta"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/payment_conf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/recharge_area"
+        android:layout_marginBottom="13dp"
+        android:visibility="gone">
+
+        <fragment
+            android:id="@+id/fragment_paymentcnf"
+            android:name="sugelico.postabsugelico.bill_frg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_win"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_logo" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="www.Sugelico.com"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/sale_card"
+            android:layout_alignStart="@+id/sale_card"
+            android:layout_below="@+id/sale_card"
+            android:layout_marginLeft="53dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="26dp"
+            android:text="Vender Tarjeta"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="normal|bold"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView5"
+            android:layout_alignBottom="@+id/textView5"
+            android:layout_alignLeft="@+id/imageButton1000"
+            android:layout_alignStart="@+id/imageButton1000"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:text="Recargar Tarjeta"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="normal|bold" />
+
+        <ImageButton
+            android:id="@+id/sale_card"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_below="@+id/imageView3"
+            android:layout_marginTop="40dp"
+            android:layout_toLeftOf="@+id/textView"
+            android:layout_toStartOf="@+id/textView"
+            android:background="@drawable/ic_card"
+            android:onClick="saleCard"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/imageButton1000"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_alignTop="@+id/sale_card"
+            android:layout_toEndOf="@+id/textView"
+            android:layout_toRightOf="@+id/textView"
+            android:background="@drawable/ic_point"
+            android:onClick="sacn_qr" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/product_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="250dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/frag_category"
+                android:name="sugelico.postabsugelico.category"
+                android:layout_width="315sp"
+                android:layout_height="193sp"
+                android:layout_marginLeft="5sp"
+                tools:layout="@layout/fragment_category" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prods_req_lbl"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="159dp"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="700dp"
+            android:layout_height="700sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/progress_frm"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/gobacktables"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:background="@color/colorPrimaryDark"
+                    android:paddingLeft="5sp"
+                    android:paddingRight="5sp"
+                    android:text="@string/gobacktables" />
+
+                <ProgressBar
+                    android:id="@+id/progressbar_main"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="74dp"
+                    android:layout_toEndOf="@+id/progress_lbl"
+                    android:paddingTop="8dp" />
+
+                <TextView
+                    android:id="@+id/progress_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="19dp"
+                    android:layout_toEndOf="@+id/gobacktables"
+                    android:paddingTop="8dp"
+                    android:text="@string/progress_lbl"
+                    android:textColor="@color/white_bk"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold" />
+
+
+            </RelativeLayout>
+
+            <fragment
+                android:id="@+id/fragment_prodlst"
+                android:name="sugelico.postabsugelico.products"
+                android:layout_width="700dp"
+                android:layout_height="420dp"
+                tools:layout="@layout/fragment_products" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/preaccount"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="84dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:onClick="sendPreAccount"
+                    android:text="@string/pre_account"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toStartOf="@+id/close_bill"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="2dp" />
+
+                <Button
+                    android:id="@+id/close_bill"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="124dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:onClick="closeBill"
+                    android:text="@string/print_bill"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:layout_editor_absoluteY="2dp" />
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/productsreq"
+            android:layout_width="wrap_content"
+            android:layout_height="330sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/fragment_cart"
+                android:name="sugelico.postabsugelico.cart_prods"
+                android:layout_width="315dp"
+                android:layout_height="270dp"
+                tools:layout="@layout/fragment_cart_prods" />
+
+            <LinearLayout
+                android:layout_width="317dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/send_products"
+                    android:layout_width="320sp"
+                    android:layout_height="58dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@android:color/holo_green_light"
+                    android:text="Enviar Pedido"
+                    android:textColor="@color/colorTextdGrey"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/sendProdWait"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/sendwait_lbl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sending_products"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/table_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:accessibilityLiveRegion="none"
+        android:visibility="visible">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorTextdGrey"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/delivery_layout"
+                android:layout_width="955dp"
+                android:layout_height="380dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="80dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <fragment
+                    android:id="@+id/fragment"
+                    android:name="sugelico.postabsugelico.deliveryorder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sugelicomobile_layout"
+                android:layout_width="955dp"
+                android:layout_height="561dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+                <fragment
+                    android:id="@+id/sugelicomobile_frg"
+                    android:name="sugelico.postabsugelico.SugelicoMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/tablearea"
+                android:layout_width="match_parent"
+                android:layout_height="576dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                tools:layout_editor_absoluteX="0dp">
+
+                <fragment
+                    android:id="@+id/fragment_tbl"
+                    android:name="sugelico.postabsugelico.tables"
+                    android:layout_width="761dp"
+                    android:layout_height="385dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    tools:layout="@layout/fragment_tables" />
+
+                <fragment
+                    android:id="@+id/frag_areas"
+                    android:name="sugelico.postabsugelico.areas"
+                    android:layout_width="238dp"
+                    android:layout_height="307dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="172dp"
+                    android:layout_weight="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.491"
+                    app:layout_constraintStart_toEndOf="@+id/fragment_tbl"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout="@layout/fragment_areas" />
+
+                <Button
+
+                    android:id="@+id/configuration"
+                    android:layout_width="217dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:drawableStart="@mipmap/ic_configuration"
+                    android:padding="10sp"
+                    android:text="@string/configuration"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/fragment_tbl"
+                    app:layout_constraintTop_toBottomOf="@+id/frag_areas"
+                    app:layout_constraintVertical_bias="0.0" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="1163dp"
+                android:layout_height="98dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_editor_absoluteY="8dp">
+
+                <Button
+                    android:id="@+id/mobile_btn"
+                    style="@style/button_stl"
+                    android:layout_width="204dp"
+                    android:layout_height="80sp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:drawableLeft="@drawable/scoin_small"
+                    android:text="@string/mobile"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/delivery_btn"
+                    app:layout_constraintHorizontal_bias="0.438"
+                    app:layout_constraintStart_toEndOf="@+id/area_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <Button
+                    android:id="@+id/delivery_btn"
+                    style="@style/button_stl"
+                    android:layout_width="198dp"
+                    android:layout_height="80sp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="208dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/delivery_lbl"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/area_btn"
+                    style="@style/button_stl"
+                    android:layout_width="194dp"
+                    android:layout_height="80sp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="208dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/areas"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

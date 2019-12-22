@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:weightSum="1">
+
+    <Button
+        android:id="@+id/tbl_occupied"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/occupied_table"
+        android:text="1"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/tbl_unoccupied"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/unoccupied_table"
+        android:text="1"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="200sp"
+        android:layout_gravity="bottom"
+        android:layout_height="200sp"
+        android:padding="10dp"
+        android:id="@+id/tblSel"
+        android:visibility="gone">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorButton">
+
+            <TextView
+                android:id="@+id/area_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:text="piso"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white_bk"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:text="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/preorder"
+                android:visibility="visible"
+                android:textAlignment="center" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="@string/select"
+                android:id="@+id/addprod2tbl"
+                android:layout_weight="1"
+                app:backgroundTint="#FFFFFF"
+                android:checked="false"
+                android:textAllCaps="true"
+                android:textStyle="normal|bold"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

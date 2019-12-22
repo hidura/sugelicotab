@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="200dp"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:layout_width="190dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/singleProd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5sp"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+        <CheckBox
+            android:id="@+id/addprod2lst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="right"
+            android:layout_toStartOf="@+id/singleProd"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/ic_add" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_height="200sp"
+        android:padding="10dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorButton">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:paddingLeft="5sp"
+                android:text="Nombre producto"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
+            <TextView
+                android:text="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:id="@+id/amount"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/client_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:paddingLeft="5sp"
+                android:text="CLIENTE"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5sp">
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_weight="1"
+                    android:text="$0.00"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:textStyle="normal|bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:text="Descuento"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:visibility="visible" />
+            <TextView
+                android:text="NOTAS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/notes1"
+                android:visibility="gone"
+                android:layout_marginBottom="10sp"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/order_code"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

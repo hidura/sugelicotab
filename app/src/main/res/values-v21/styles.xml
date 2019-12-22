@@ -1,0 +1,17 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+    <style name="edittext_stl">
+        <item name="android:height">40sp</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">#32444343</item>
+    </style>
+</resources>

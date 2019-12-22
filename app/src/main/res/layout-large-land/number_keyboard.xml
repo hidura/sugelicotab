@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:id="@+id/order_det_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/people_table"
+                android:layout_width="500dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="39dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="@string/people_on_lbl"
+                android:inputType="numberSigned"
+                android:paddingRight="20dp"
+                android:textAlignment="textEnd"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/name_tbl"
+                android:layout_width="500dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="39dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Nombre de la mesa"
+                android:inputType="text"
+                android:paddingRight="20dp"
+                android:textAlignment="textEnd"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/fastfood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comida Rapida"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/check"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:background="#ff99cc00"
+            android:fontFamily="sans-serif-medium"
+            android:src="@drawable/ic_check"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="25dp"
+        android:id="@+id/wait_order"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/progressBar4" />
+
+        <TextView
+            android:text="@string/opening_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="49dp"
+            android:id="@+id/textView14"
+            android:textSize="35dp"
+            android:layout_below="@+id/progressBar4"
+            android:layout_centerHorizontal="true"
+            android:textStyle="normal|bold"
+            android:textColor="@color/white_bk" />
+    </RelativeLayout>
+
+
+</LinearLayout>

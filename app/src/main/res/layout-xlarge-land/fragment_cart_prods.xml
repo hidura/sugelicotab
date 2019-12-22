@@ -1,0 +1,79 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="500sp"
+    tools:context="sugelico.postabsugelico.cart_prods">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="@color/colorBackgroundGrey"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <Button
+            android:text="Otros procesos"
+            android:id="@+id/various_process"
+            android:textSize="16sp"
+            android:background="@android:color/holo_green_light"
+            android:textColor="@color/colorTextdGrey"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:text="Total:"
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorTextdGrey"
+                android:textSize="20sp"
+                android:layout_height="30dp"
+                android:background="@color/colorAccent"
+                android:paddingRight="10dp"
+                android:paddingTop="2dp"
+                android:textStyle="normal|bold" />
+            <EditText
+                android:layout_width="45dp"
+                android:layout_height="30dp"
+                android:inputType="textPersonName"
+                android:text="RD$"
+                android:ems="10"
+                android:id="@+id/currency"
+                android:background="@color/colorAccent"
+                android:textColor="@color/colorTextdGrey"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:inputType="textPersonName"
+                android:text="0.00"
+                android:ems="10"
+                android:id="@+id/total"
+                android:background="@color/colorAccent"
+                android:textColor="@color/colorTextdGrey"
+                android:paddingRight="20dp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cat_prods_data"
+            android:paddingTop="5sp"
+            android:layout_below="@+id/various_process"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/linearLayout2">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+</FrameLayout>
